@@ -1,0 +1,100 @@
+{
+  "mzQC": {
+    "contactAddress": "john.doe@example.org",
+    "contactName": "John Doe",
+    "controlledVocabularies": [
+      {
+        "name": "PSI-MS",
+        "uri": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo",
+        "version": "4.1.53"
+      },
+      {
+        "name": "QC",
+        "uri": "https://raw.githubusercontent.com/HUPO-PSI/qcML-development/master/cv/qc-cv.obo",
+        "version": "0.1.1"
+      }
+    ],
+    "creationDate": "2023-03-15T09:30:42Z",
+    "description": "A simple example mzQC file",
+    "runQualities": [
+      {
+        "metadata": {
+          "analysisSoftware": [
+            {
+              "accession": "MS:1001058",
+              "name": "quality estimation by manual validation",
+              "uri": "https://example.org/manual_validation",
+              "version": "1.0.0"
+            }
+          ],
+          "inputFiles": [
+            {
+              "fileFormat": {
+                "accession": "MS:1000584",
+                "name": "mzML format"
+              },
+              "fileProperties": [
+                {
+                  "accession": "MS:1000747",
+                  "name": "completion time",
+                  "value": "2023-03-14T18:12:33Z"
+                }
+              ],
+              "location": "file:///path/to/example_data.raw",
+              "name": "example_data.raw"
+            }
+          ],
+          "label": "Example Run 1"
+        },
+        "qualityMetrics": [
+          {
+            "accession": "MS:4000053",
+            "name": "RT duration",
+            "value": 3600.5
+          },
+          {
+            "accession": "MS:4000059",
+            "name": "Number of MS1 spectra",
+            "value": 5432
+          },
+          {
+            "accession": "MS:4000060",
+            "name": "Number of MS2 spectra",
+            "value": 12345
+          },
+          {
+            "accession": "MS:4000054",
+            "name": "RT over TIC quantile",
+            "value": [
+              0.23,
+              0.48,
+              0.71,
+              0.97
+            ]
+          },
+          {
+            "accession": "MS:4000063",
+            "name": "MS2 known precursor charges fractions",
+            "value": {
+              "Charge state": [
+                1.0,
+                2.0,
+                3.0,
+                4.0,
+                5.0
+              ],
+              "Fraction": [
+                0.05,
+                0.45,
+                0.35,
+                0.12,
+                0.03
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "version": "1.0.0"
+  }
+}
